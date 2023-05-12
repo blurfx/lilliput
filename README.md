@@ -1,5 +1,9 @@
 # lilliput
 
+This repository is a fork of [discord/lilliput](https://github.com/discord/lilliput) to support animated webp.
+
+-----
+
 [lilliput](https://en.wiktionary.org/wiki/lilliputian#Adjective) resizes images in Go.
 
 Lilliput relies on mature, high-performance C libraries to do most of the work of
