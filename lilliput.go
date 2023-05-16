@@ -125,7 +125,8 @@ func NewEncoder(ext string, decodedBy Decoder, dst []byte) (Encoder, error) {
 
 	if strings.ToLower(ext) == ".webp" {
 		header, _ := decodedBy.Header()
-		if header != nil && header.numFrames > 1 {
+		// TODO: should strictly check that input is gif and numFrames is zero.
+		if header != nil && (header.numFrames == 0 || header.numFrames > 1) {
 			return newWebPEncoder(decodedBy, dst)
 		}
 	}
